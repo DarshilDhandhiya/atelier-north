@@ -1,0 +1,13 @@
+{
+  "name": "atelier-north-e2e",
+  "private": true,
+  "type": "module",
+  "description": "Real-browser end-to-end flow, accessibility scan and screenshot capture. Needs the API and the frontend running.",
+  "scripts": {
+    "flow": "node flow.mjs",
+    "axe": "node axe.mjs",
+    "screenshots": "node screenshots.mjs",
+    "all": "node flow.mjs && node axe.mjs"
+  },
+  "dependencies": { "axe-core": "^4.10.0", "puppeteer-core": "^24.0.0" }
+}

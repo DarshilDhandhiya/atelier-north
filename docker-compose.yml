@@ -1,0 +1,14 @@
+# Optional local services: MongoDB + MailHog (catches outgoing mail so you can see staff notifications).
+#   docker compose up -d
+# Then in backend/.env:  MONGODB_URI=mongodb://127.0.0.1:27017/atelier_north  SMTP_HOST=127.0.0.1  SMTP_PORT=1025
+# Open http://localhost:8025 to read captured emails.
+services:
+  mongo:
+    image: mongo:7
+    ports: ["27017:27017"]
+    volumes: [mongo-data:/data/db]
+  mailhog:
+    image: mailhog/mailhog
+    ports: ["1025:1025", "8025:8025"]
+volumes:
+  mongo-data:
