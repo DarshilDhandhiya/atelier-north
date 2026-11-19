@@ -1,0 +1,5 @@
+# Netlify: proxy SEO files to the API, then single-page-app fallback.
+# 1) Replace YOUR-API-HOST with your deployed API domain.
+/sitemap.xml  https://YOUR-API-HOST/sitemap.xml  200
+/robots.txt   https://YOUR-API-HOST/robots.txt   200
+/*            /index.html                        200
